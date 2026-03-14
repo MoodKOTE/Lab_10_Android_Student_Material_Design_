@@ -19,6 +19,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.Card
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
@@ -82,21 +83,28 @@ fun StudentItem(
     student: Student,
     modifier: Modifier = Modifier
 ){
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(dimensionResource(R.dimen.padding_small))
-    ) {
-        StudentIcon(student.imageResourceId)
-        StudentInformation(student.name, student.age)
+    Card(modifier = modifier) {
+        Row(
+            modifier = modifier
+                .fillMaxWidth()
+                .padding(dimensionResource(R.dimen.padding_small))
+        ) {
+            StudentIcon(student.imageResourceId)
+            StudentInformation(student.name, student.age)
+        }
     }
 }
-
 @Composable
-fun StudentApp(){
-    LazyColumn {
-        items(students){
-            StudentItem(student = it)
+fun StudentApp() {
+    Scaffold { it ->
+        LazyColumn(contentPadding = it) {
+            items(students) {
+                StudentItem(
+                    student = it,
+                    modifier = Modifier
+                        .padding(dimensionResource(R.dimen.padding_small))
+                )
+            }
         }
     }
 }
@@ -108,3 +116,11 @@ fun StudentPreview(){
         StudentApp()
     }
 }
+
+//@Preview
+//@Composable
+//fun StudentDarkThemePreview(){
+//    Student_Material_DesignTheme(darkTheme = true) {
+//        StudentApp()
+//    }
+//}

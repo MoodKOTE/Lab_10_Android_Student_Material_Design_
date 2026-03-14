@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">Student List</string>
     <!-- Students names -->
-    <string name="student1">Иван Петров</string>
-    <string name="student2">Мария Смирнова</string>
+    <string name="student1">Мария Смирнова</string>
+    <string name="student2">Иван Петров</string>
     <string name="student3">Алексей Иванов</string>
     <string name="student4">Анна Козлова</string>
-    <string name="student5">Роман Соколов</string>
-    <string name="student6">Елена Морозова</string>
-    <string name="student7">Максим Новиков</string>
-    <string name="student8">Ольга Волкова</string>
-    <string name="student9">Сергей Лебедев</string>
+    <string name="student5">Ева Соколова</string>
+    <string name="student6">Данил Морозов</string>
+    <string name="student7">Анастасия Новикова</string>
+    <string name="student8">Григорий Волков</string>
+    <string name="student9">Жанна Лебедева</string>
     <string name="student10">Татьяна Егорова</string>
 
     <!-- Student description -->
